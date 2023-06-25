@@ -8,11 +8,9 @@ import android.widget.Button;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    Button button ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        Button button ;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -20,7 +18,11 @@ public class MainActivity extends AppCompatActivity {
 
         button=findViewById(R.id.add_contact_button);
 
+        onClicks();
 
+    }
+    public void onClicks()
+    {
         button.setOnClickListener(view -> {
             Intent i = new Intent(getApplicationContext(), MainActivity2.class);
             startActivity(i);
